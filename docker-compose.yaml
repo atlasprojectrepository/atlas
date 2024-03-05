@@ -1,0 +1,44 @@
+version: '3'
+services:
+
+  frontend:
+    container_name: atlas-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      host: { }
+    volumes:
+      - ./frontend:/usr/src/app
+      - ./frontend/node_modules:/usr/src/app/node_modules
+
+  backend:
+    container_name: atlas-backend
+    env_file:
+      - .env
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3000'
+    networks:
+      host: { }
+    depends_on:
+      - database
+    volumes:
+      - ./backend:/usr/src/app
+
+  database:
+    container_name: atlas-db
+    image: 'postgres:16.1-alpine'
+    ports:
+      - "15432:5432"
+    env_file:
+      - .env
+    networks:
+      host: { }
+
+networks:
+  host: { }
