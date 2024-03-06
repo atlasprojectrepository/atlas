@@ -8,10 +8,10 @@ export default function LoginForm() {
                         <div className="flex justify-between">
                             <label
                                 className="text-xs font-medium text-muted-foreground group-focus-within:text-white text-gray-400">Nom
-                                d'utilisateur</label>
+                                d&apos;utilisateur</label>
                         </div>
                         <input type="text" name="username" placeholder="Nom d'utilisateur"
-                               className="block w-full border-0 bg-transparent p-0 text-sm file:my-1 file:rounded-full file:border-0 file:bg-accent file:px-4 file:py-2 file:font-medium placeholder:text-muted-foreground/90 focus:outline-none focus:ring-0 sm:leading-7 text-foreground"/>
+                               className="block text-white w-full border-0 bg-transparent p-0 text-sm file:my-1 file:rounded-full file:border-0 file:bg-accent file:px-4 file:py-2 file:font-medium placeholder:text-muted-foreground/90 focus:outline-none focus:ring-0 sm:leading-7 text-foreground"/>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@ export default function LoginForm() {
                         </div>
                         <div className="flex items-center">
                             <input type="password" name="password"
-                                   className="block w-full border-0 bg-transparent p-0 text-sm file:my-1 placeholder:text-muted-foreground/90 focus:outline-none focus:ring-0 focus:ring-teal-500 sm:leading-7 text-foreground"/>
+                                   className="block text-white w-full border-0 bg-transparent p-0 text-sm file:my-1 placeholder:text-muted-foreground/90 focus:outline-none focus:ring-0 focus:ring-teal-500 sm:leading-7 text-foreground"/>
                         </div>
                     </div>
                 </div>
